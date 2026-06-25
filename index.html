@@ -11,14 +11,14 @@
 
     <style>
         :root {
-            --bg-color: #f9f6f0;          
-            --text-color: #2c2523;       
-            --header-bg: #4a3e3d;       
+            --bg-color: #f9f6f0;
+            --text-color: #2c2523;
+            --header-bg: #4a3e3d;
             --header-text: #ffffff;
             --card-bg: #ffffff;
-            --accent-color: #ffb7b2;    
-            --accent-dark: #e5989b;   
-            --table-header: #6d5959;      
+            --accent-color: #ffb7b2;
+            --accent-dark: #e5989b;
+            --table-header: #6d5959;
             --table-row-even: #fdfbf7;
         }
 
@@ -82,7 +82,6 @@
             padding: 0 20px;
         }
 
-
         .intro-section {
             background-color: var(--card-bg);
             padding: 35px;
@@ -96,7 +95,7 @@
             font-size: 2rem;
             color: var(--header-bg);
             margin-top: 0;
-            text-decoration: underline; 
+            text-decoration: underline;
         }
 
         .intro-section p {
@@ -104,14 +103,12 @@
             font-size: 1.05rem;
         }
 
-
         .subrayado-especial {
             text-decoration: underline;
             font-weight: 600;
             color: var(--table-header);
         }
 
-   
         .historical-images {
             display: flex;
             flex-wrap: wrap;
@@ -171,7 +168,6 @@
             line-height: 1.5;
         }
 
-    
         .panel-buttons {
             display: flex;
             gap: 20px;
@@ -197,7 +193,6 @@
             background-color: var(--header-bg);
             transform: translateY(-2px);
         }
-
 
         .tabla-desplegable {
             display: none;
@@ -245,7 +240,6 @@
             object-fit: cover;
         }
 
- 
         .pulse-effect {
             animation: pulse-animation 2s infinite ease-in-out;
         }
@@ -269,7 +263,6 @@
             background-color: var(--bg-color);
             color: var(--text-color);
         }
-
 
         .form-section {
             background-color: var(--card-bg);
@@ -498,9 +491,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script>
-
-        const SUPABASE_URL = "https://rxvvpkdhadnznclahovd.supabase.co"; 
-        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4dnZwa2RoYWRuem5jbGFob3ZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNDg4NjAsImV4cCI6MjA5NzkyNDg2MH0.XonH6zGHpuA2uzuXxfrn27XmA0v8i84g3O-EdvndJ5k";
+        const SUPABASE_URL = "PEGA_AQUÍ_TU_PROJECT_URL"; 
+        const SUPABASE_ANON_KEY = "PEGA_AQUÍ_TU_ANON_PUBLIC_KEY";
 
         const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -513,7 +505,6 @@
             }
         }
 
-   
         function togglePanel(panelId) {
             const panel = document.getElementById(panelId);
             panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
@@ -529,7 +520,6 @@
             const calificacionPaginaVal = document.getElementById('ratingPage').value;
 
             try {
-                
                 const { data, error } = await supabaseClient
                     .from('gatos_registro')
                     .insert([
