@@ -492,7 +492,7 @@
 
     <script>
         const SUPABASE_URL = "https://wfsxmolimdgajafxtsou.supabase.co"; 
-        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indmc3htb2xpbWRnYWphZnh0c291Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNjcyMDcsImV4cCI6MjA5Nzk0MzIwN30.kUK_to_E-_1SGG3E4k6CGDMZyFdnYUTIO3owZj7aQsQ";
+        const SUPABASE_ANON_KEY = "sb_publishable_uILeOuDv_ZUYyjUDrMHxcQ_-7ORCloN";
 
         const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -526,7 +526,7 @@
                         { 
                             usuario: usuarioVal, 
                             tipo_gato: tipoGatoVal, 
-                            codigo_verificaci: codigoVerificacionVal, 
+                            codigo_verificasi: codigoVerificacionVal, 
                             cantidad_y_favor: cantidadYFavoritoVal, 
                             calificacion_pagi: calificacionPaginaVal 
                         }
@@ -536,8 +536,8 @@
 
                 alert(`¡Datos felinos enviados correctamente a Supabase!\nGracias por registrarte, ${usuarioVal}.`);
                 document.getElementById('gatosForm').reset();
-
-            } catch (error) {
+               
+             } catch (error) {
                 console.error("Error al guardar registro de gatos:", error);
                 alert("Hubo un error al guardar en la base de datos: " + error.message);
             }
